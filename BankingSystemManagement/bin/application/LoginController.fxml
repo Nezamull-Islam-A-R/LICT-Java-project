@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1000.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0073e6;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageController">
+   <children>
+      <GridPane layoutX="135.0" layoutY="191.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="818.0" minWidth="10.0" prefWidth="620.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="456.0" minWidth="0.0" prefWidth="380.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="89.0" minHeight="3.0" prefHeight="66.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="408.0" minHeight="10.0" prefHeight="388.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="320.0" minHeight="10.0" prefHeight="103.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="92.0" prefWidth="620.0" style="-fx-background-color: #004d99;" GridPane.rowIndex="2">
+               <children>
+                  <JFXButton fx:id="privacy" layoutX="14.0" layoutY="78.0" onAction="#handlePrivacy" text="Privacy &amp; Policy" textFill="#f2ecec" underline="true" />
+                  <JFXButton fx:id="terms" layoutX="114.0" layoutY="78.0" onAction="#handleTerms" text="Terms &amp; Condition" textFill="#f2ecec" underline="true" />
+                  <JFXButton fx:id="copyR" layoutX="230.0" layoutY="78.0" onAction="#copyHandle" text="\@Copyright" textFill="#f2ecec" underline="true" />
+               </children></Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #004d99;" GridPane.rowIndex="1">
+               <children>
+                  <Label layoutX="155.0" layoutY="170.0" prefHeight="46.0" prefWidth="357.0" text="Welcome to Bank Oxygen,Keep safe your money ." textFill="#ebe5e5" />
+                  <JFXButton fx:id="signUpButton" buttonType="RAISED" layoutX="209.0" layoutY="216.0" onAction="#handleSignUpButton" prefHeight="46.0" prefWidth="178.0" ripplerFill="#39f746" style="-fx-background-color: #00bf13;" text="Sign Up" textFill="#f5f5f5">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fitHeight="60.0" fitWidth="100.0" layoutX="89.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hand_shake.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="97.0" prefWidth="620.0" style="-fx-background-color: #004d99;">
+               <children>
+                  <Label layoutX="152.0" layoutY="2.0" prefHeight="69.0" prefWidth="293.0" text="Bank Oxygen" textFill="#fffefe">
+                     <font>
+                        <Font name="Corbel" size="51.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="60.0" fitWidth="64.0" layoutX="85.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bank_ic.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="438.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@bank_ic.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="362.0" prefWidth="380.0" style="-fx-background-color: #004d99;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Pane prefHeight="415.0" prefWidth="336.0" style="-fx-background-color: #39b7ff;">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <TextField fx:id="enterMailiD" layoutX="42.0" layoutY="62.0" prefHeight="35.0" prefWidth="265.0" promptText="Enter Your Mail Address" style="-fx-background-radius: 20; -fx-background-color: #ffffff;" />
+                        <TextField fx:id="enterPass" layoutX="42.0" layoutY="120.0" prefHeight="35.0" prefWidth="265.0" promptText="Enter Your Password (length &gt; 4)" style="-fx-background-radius: 20; -fx-background-color: #ffffff;" />
+                        <JFXButton fx:id="signInButton" alignment="CENTER" layoutX="42.0" layoutY="288.0" onAction="#onSignInAction" prefHeight="37.0" prefWidth="265.0" ripplerFill="#37f847" style="-fx-background-color: #00bf13;" text="Sign in" textFill="#f8f7f7">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXButton fx:id="forgotButton" alignment="CENTER" layoutX="42.0" layoutY="332.0" onAction="#findForgot" prefHeight="37.0" prefWidth="265.0" ripplerFill="#39f746" style="-fx-background-color: #00bf13;" text="Fotgot Password ?" textFill="#fffefe" underline="true">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </JFXButton>
+                        <JFXComboBox fx:id="selectJob" focusColor="CRIMSON" labelFloat="true" layoutX="42.0" layoutY="173.0" onAction="#jobSelection" prefHeight="35.0" prefWidth="265.0" promptText="Select Your Job Position" />
+                        <Text fx:id="show" layoutX="41.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="178.00001055002213" />
+                        <Text fx:id="signiWarning" fill="#ee0808" layoutX="42.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="264.99998569488525" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane prefHeight="62.0" prefWidth="380.0" style="-fx-background-color: #004d99;" GridPane.columnIndex="1" />
+            <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #004d99;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="500.0" minWidth="830.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #DC143C;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPageController">
+   <children>
+      <GridPane layoutX="87.0" layoutY="132.0" prefHeight="500.0" prefWidth="830.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="244.0" minHeight="10.0" prefHeight="180.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="420.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="311.0" prefWidth="375.0" style="-fx-background-color: #FFAFAF;" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="30.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <JFXTextField fx:id="eName" focusColor="CRIMSON" labelFloat="true" layoutX="90.0" layoutY="44.0" prefHeight="35.0" prefWidth="265.0" promptText="Enter Your Name" />
+                        <JFXTextField fx:id="ePhn" focusColor="CRIMSON" labelFloat="true" layoutX="90.0" layoutY="109.0" prefHeight="35.0" prefWidth="265.0" promptText="Enter Your Phone No." />
+                        <JFXTextField fx:id="eNID" focusColor="CRIMSON" labelFloat="true" layoutX="90.0" layoutY="175.0" prefHeight="35.0" prefWidth="265.0" promptText="Enter Your NID no." />
+                        <JFXComboBox fx:id="selectJob" focusColor="CRIMSON" labelFloat="true" layoutX="90.0" layoutY="236.0" onAction="#jobSelection" prefHeight="35.0" prefWidth="265.0" promptText="Choose Your Job " />
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #01BF6D;">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <ImageView fitHeight="81.0" fitWidth="84.0" layoutX="29.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@bank_ic.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="122.0" layoutY="45.0" prefHeight="50.0" prefWidth="252.0" text="Bank Oxygen" textFill="#fffdfd">
+                           <font>
+                              <Font name="Corbel" size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <Pane prefHeight="479.0" prefWidth="375.0" style="-fx-background-color: #FFAFAF;" GridPane.columnIndex="1">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <GridPane.margin>
+                  <Insets bottom="30.0" left="20.0" right="20.0" top="20.0" />
+               </GridPane.margin>
+               <children>
+                  <JFXTextField fx:id="eHomeAddress" focusColor="CRIMSON" labelFloat="true" layoutX="98.0" layoutY="52.0" prefHeight="35.0" prefWidth="265.0" promptText="Your Home Address" />
+                  <JFXTextField fx:id="eFavAnimal" focusColor="CRIMSON" labelFloat="true" layoutX="98.0" layoutY="112.0" prefHeight="35.0" prefWidth="265.0" promptText="Favourite Animal" />
+                  <JFXTextField fx:id="eEmail" focusColor="CRIMSON" labelFloat="true" layoutX="98.0" layoutY="173.0" prefHeight="35.0" prefWidth="265.0" promptText="Your E-mail Address" />
+                  <JFXTextField fx:id="ePassWord" focusColor="CRIMSON" labelFloat="true" layoutX="98.0" layoutY="240.0" prefHeight="35.0" prefWidth="265.0" promptText="Enter Password" />
+                  <JFXTextField fx:id="eConfPass" focusColor="CRIMSON" labelFloat="true" layoutX="98.0" layoutY="296.0" prefHeight="35.0" prefWidth="265.0" promptText="Confirm Password" />
+                  <JFXButton fx:id="eSubmit" buttonType="RAISED" layoutX="237.0" layoutY="443.0" onAction="#eSubmitHandle" prefHeight="46.0" prefWidth="178.0" ripplerFill="#ffafaf" style="-fx-background-color: #DC143C;" text="Submit" textFill="#f5f5f5">
+                     <font>
+                        <Font name="Corbel" size="19.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
