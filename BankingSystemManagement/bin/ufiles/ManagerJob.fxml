@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #527B9F;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AccManagerController">
+   <children>
+      <GridPane layoutX="77.0" layoutY="273.0" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="650.0" minWidth="10.0" prefWidth="376.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="624.0" minWidth="10.0" prefWidth="624.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane prefHeight="600.0" prefWidth="700.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="193.0" minHeight="1.0" prefHeight="94.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="531.0" minHeight="10.0" prefHeight="506.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #B6DBFC;">
+                     <children>
+                        <Label layoutX="82.0" layoutY="12.0" prefHeight="51.0" prefWidth="258.0" text="Bank Oxygen" textFill="#527b9e">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="58.0" fitWidth="80.0" layoutX="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@bank_ic.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Pane>
+                  <GridPane prefHeight="464.0" prefWidth="376.0" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="461.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="471.0" minHeight="10.0" prefHeight="471.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Pane prefHeight="457.0" prefWidth="356.0" style="-fx-background-color: #B6DBFC;" GridPane.rowIndex="1">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <GridPane.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" />
+                           </GridPane.margin>
+                           <children>
+                              <JFXTextField fx:id="selectAccNo" focusColor="#527b9f" labelFloat="true" layoutX="14.0" layoutY="114.0" prefHeight="35.0" prefWidth="233.0" promptText="Acc. No" unFocusColor="#222121" />
+                              <JFXTextField fx:id="selectAcPin" focusColor="#527b9f" labelFloat="true" layoutX="14.0" layoutY="174.0" prefHeight="35.0" prefWidth="233.0" promptText="Pin / Password" />
+                              <JFXButton fx:id="clossAcc" buttonType="RAISED" layoutX="217.0" layoutY="397.0" onAction="#handleClossAcc" prefHeight="50.0" prefWidth="106.0" style="-fx-background-color: #DC143C;" text="Close Acc." textFill="#f5f4f4">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXComboBox fx:id="selectAccType" focusColor="#527b9e" labelFloat="true" layoutX="14.0" layoutY="42.0" onAction="#closeSelectAccType" prefHeight="35.0" prefWidth="233.0" promptText="Select Acc. Type" />
+                              <Text fx:id="closeTextInfo" fill="#eb0707" layoutX="14.0" layoutY="246.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="233.0000102519989" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #B6DBFC;">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="101.0" layoutY="6.0" prefHeight="27.0" prefWidth="157.0" text="Close Account" textFill="#527b9f">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <GridPane.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </GridPane.margin>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Pane>
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+            <GridPane GridPane.columnIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="294.0" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="572.0" minHeight="10.0" prefHeight="539.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane prefHeight="31.0" prefWidth="594.0" style="-fx-background-color: #B6DBFC;">
+                     <children>
+                        <Label alignment="CENTER" layoutX="201.0" layoutY="4.0" prefHeight="33.0" prefWidth="226.0" text="Open Account" textFill="#527b9e">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <GridPane.margin>
+                        <Insets bottom="1.0" left="20.0" right="10.0" top="10.0" />
+                     </GridPane.margin>
+                  </Pane>
+                  <Pane prefHeight="509.0" prefWidth="594.0" style="-fx-background-color: #B6DBFC;" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" left="20.0" right="10.0" />
+                     </GridPane.margin>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <children>
+                        <JFXTextField fx:id="uName" focusColor="#527b9f" labelFloat="true" layoutX="14.0" layoutY="48.0" prefHeight="35.0" prefWidth="233.0" promptText="Name" unFocusColor="#111010" />
+                        <JFXTextField fx:id="uNID" focusColor="#527b9f" labelFloat="true" layoutX="14.0" layoutY="122.0" prefHeight="35.0" prefWidth="233.0" promptText="NID No." unFocusColor="#1e1d1d" />
+                        <JFXTextField fx:id="uHomeAdd" focusColor="#527b9e" labelFloat="true" layoutX="14.0" layoutY="190.0" prefHeight="35.0" prefWidth="233.0" promptText="Home Address" unFocusColor="#171717" />
+                        <JFXTextField fx:id="uPresentAdd" focusColor="#527b9e" labelFloat="true" layoutX="14.0" layoutY="265.0" prefHeight="35.0" prefWidth="233.0" promptText="Present Address" unFocusColor="#1b1a1a" />
+                        <JFXTextField fx:id="uPhn" focusColor="#527b9e" labelFloat="true" layoutX="14.0" layoutY="332.0" prefHeight="35.0" prefWidth="233.0" promptText="Phone No." unFocusColor="#171717" />
+                        <JFXTextField fx:id="uFathers" focusColor="#527b9f" labelFloat="true" layoutX="331.0" layoutY="48.0" prefHeight="35.0" prefWidth="233.0" promptText="Father's Name" unFocusColor="#171717" />
+                        <JFXTextField fx:id="uEdu" focusColor="#527b9f" labelFloat="true" layoutX="14.0" layoutY="416.0" prefHeight="35.0" prefWidth="233.0" promptText="Education" unFocusColor="#171717" />
+                        <JFXTextField fx:id="uMothers" focusColor="#527b9e" labelFloat="true" layoutX="331.0" layoutY="122.0" prefHeight="35.0" prefWidth="233.0" promptText="Mother's Name" unFocusColor="#363839" />
+                        <JFXButton fx:id="openAc" buttonType="RAISED" layoutX="458.0" layoutY="465.0" onAction="#handleOpenAcc" prefHeight="50.0" prefWidth="106.0" style="-fx-background-color: #DC143C;" text="Open Acc." textFill="#f5f4f4">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXTextField fx:id="uNote" focusColor="#527b9e" labelFloat="true" layoutX="331.0" layoutY="190.0" prefHeight="35.0" prefWidth="233.0" promptText="Acc Password" unFocusColor="#363839" />
+                        <Text fx:id="openTextInfo1" fill="#19831c" layoutX="331.0" layoutY="429.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="233.0000102519989" />
+                        <JFXComboBox fx:id="selectOpenAccType" focusColor="#527b9e" labelFloat="true" layoutX="331.0" layoutY="265.0" onAction="#openSelectAccType" prefHeight="35.0" prefWidth="233.0" promptText="Select Acc. Type" />
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
